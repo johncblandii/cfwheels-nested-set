@@ -394,7 +394,7 @@
 
 
 	<cffunction name="ancestor" returntype="any" access="public" output="false" hint="I return the parent of the current node.">
-		<cfreturn findOne(where="$getIdColumn=#this[$getParentColumn()]#")>
+		<cfreturn findOne(where="#$getIdColumn()#=#this[$getParentColumn()]#")>
 	</cffunction>
 	
 	
